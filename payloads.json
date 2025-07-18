@@ -25,7 +25,7 @@
   ],
     "XSS": [
       "<script>alert(\"test\")</script>",
-      "<img src=x onerror=alert(\"test\")"
+      "<img src=x onerror=alert(\"test\")>"
     ],
    "RCE": [
     "';ls;#",
