@@ -54,10 +54,10 @@ def mostrar_diffs_con_rich(diffs, payload, location, method, url, content_type):
             expand=True,
             width=min(100, console.width - 10)
         )
-        table.add_column("Cabecera", style="bold cyan", min_width=15)
+        table.add_column("Header", style="bold cyan", min_width=15)
         table.add_column("Original", style="green",
                          min_width=25, overflow="fold")
-        table.add_column("Modificado", style="red",
+        table.add_column("Modified", style="red",
                          min_width=25, overflow="fold")
 
         for header, values in diffs["headers"].items():
@@ -614,7 +614,7 @@ def main():
         type=str,
         choices=["both", "json", "form"],
         default="both",
-        help="Formato del cuerpo: both (JSON y form-data), json, o form (default: both)"
+        help="Body format: both (JSON and form-data), json, or form (default: both)"
     )
 
     args = parser.parse_args()
